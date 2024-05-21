@@ -1,5 +1,12 @@
-FROM ubuntu:22.04
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y npm nodejs
+RUN apk --no-cache add \
+  bash \
+  nodejs \
+  npm \
+  yarn \
+  && rm -rf /var/cache/apk/*
 
 RUN npm install --global cdk8s-cli
+
+CMD [ "/bin/bash" ]
