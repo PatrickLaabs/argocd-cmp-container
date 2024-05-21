@@ -1,12 +1,11 @@
 FROM alpine:latest
 
 RUN apk --no-cache add \
-  bash \
   nodejs \
   npm \
   yarn \
   && rm -rf /var/cache/apk/*
 
-RUN npm install --global cdk8s-cli
+RUN yarn global add cdk8s-cli
 
-CMD [ "/bin/bash" ]
+CMD [ "/bin/sh" ]
