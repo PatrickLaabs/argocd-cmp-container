@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM golang:alpine3.19
 
 RUN apk --no-cache add \
   nodejs \
