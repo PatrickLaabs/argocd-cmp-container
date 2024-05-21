@@ -1,6 +1,5 @@
-FROM alpine
+FROM ubuntu:22.04
 
-RUN apk add --update npm yarn
+RUN apt-get update && apt-get install -y npm nodejs
 
-#RUN npm i -g cdk8s-cli
-RUN yarn global add cdk8s-cli
+RUN npm install --global cdk8s-cli
