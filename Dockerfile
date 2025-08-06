@@ -1,4 +1,4 @@
-FROM golang:alpine3.19
+FROM golang:tip-alpine3.22
 
 RUN apk --no-cache add \
   nodejs \
